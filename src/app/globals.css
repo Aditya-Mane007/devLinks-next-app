@@ -1,13 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #cbcbcb;
   --foreground: #171717;
+  --purplePrimary: #633cff;
+  --purpleSecondary: #beadff;
+  --purpleTertiary: #efebff;
+  --blackPrimary: #333333;
+  --blackSecondary: #737373;
+  --blackTertiary: #d9d9d9;
+  --whitePrimary: #ffffff;
+  --whiteSecondary: #fafafa;
+  --redPrimary: #ff3939;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -19,10 +30,56 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Instrument Sans", sans-serif;
+  background: var(--whiteSecondary);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: var(--whitePrimary);
+  }
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.error-message {
+  /* font-size: 0.85rem; */
+  color: var(--redPrimary);
+}
+
+input {
+  border: 1px solid var(--blackSecondary);
+  width: 100%;
+  padding: 0.5rem 2.25rem;
+  border-radius: 5px;
+  margin: 0.25rem 0;
+  outline: none;
+  font-size: 1rem;
+
+  &:focus {
+    border: 1px solid var(--purplePrimary);
+    box-shadow: 0.5px 0.5px 8px var(--purplePrimary);
+  }
+  &.has-error {
+    border: 1px solid var(--redPrimary);
+    box-shadow: none;
+  }
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: var(--whitePrimary);
+  background-color: var(--purplePrimary);
+  &:hover {
+    opacity: 0.5;
+  }
+  transition: opacity 0.2s ease;
 }
