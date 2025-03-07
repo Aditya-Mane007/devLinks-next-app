@@ -32,10 +32,11 @@ function page() {
         error: "Invalid email address",
       });
     }
+
     if (!password.value) {
       setPassword({
         value: "",
-        error: "Cam't be empty",
+        error: "Can't be empty",
       });
     }
   };
@@ -49,7 +50,7 @@ function page() {
       </div>
       <div>
         <form onSubmit={handleSubmit}>
-          <div className="my-3">
+          <div className="my-4">
             <label htmlFor="email" className="label">
               Email Address
             </label>
@@ -78,7 +79,7 @@ function page() {
               )}
             </div>
           </div>
-          <div className="my-3">
+          <div className="my-4">
             <label htmlFor="password" className="label">
               Password
             </label>
@@ -102,7 +103,7 @@ function page() {
               />
               {!password.error && (
                 <p
-                  className="absolute top-5 right-2 cursor-pointer"
+                  className="absolute top-[1.1rem] right-2 cursor-pointer"
                   onClick={() => setPasswordVisible(!passwordVisible)}
                 >
                   {passwordVisible ? (

@@ -6,7 +6,7 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="max-w-[1440px] mx-auto w-screen h-screen flex justify-center items-center">
       <div className="w-full sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[30%]">
-        <div className="mb-8">
+        <div className="md:mb-8">
           <Image
             src="/assets/images/logo-devlinks-large.svg"
             width={100}

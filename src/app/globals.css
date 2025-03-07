@@ -43,6 +43,14 @@ body {
   }
 }
 
+@media (orientation: landscape) {
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow: scroll;
+  }
+}
+
 label {
   display: block;
   font-size: 0.85rem;
